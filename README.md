@@ -1,18 +1,18 @@
-# jib-containerization
+# Containerization and its methods : 
 
-#Containerization and its methods : 
+# What is Containerization ? 
 
 
-
-### Why JIB ?
+# Why JIB ?
 
 https://dzone.com/articles/containerizing-springboot-application-with-jib
 https://cloud.google.com/blog/products/application-development/introducing-jib-build-java-docker-images-better
 
+### Build image with Gradle JIB plugin
 ```
 $ cd demo/
 ```
-Run gradle task `jibDockerBuild`
+#### Run gradle task `jibDockerBuild`
 ```
 $ ./gradlew jibDockerBuild
 
@@ -33,7 +33,7 @@ BUILD SUCCESSFUL in 8s
 3 actionable tasks: 3 executed
 ```
 
-Let's dive into docker image and check layers.
+#### Let's dive into docker image and check layers.
 ``` 
 $ dive demo:0.0.1-SNAPSHOT
 Image Source: docker://demo:0.0.1-SNAPSHOT
@@ -43,7 +43,7 @@ Building cache...
 ```
 ![alt text](./assets/dive-demo-image.png)
 
-Run docker image
+#### Run docker image
 ``` 
 $ docker run -p8080:8080 demo:0.0.1-SNAPSHOT
 
