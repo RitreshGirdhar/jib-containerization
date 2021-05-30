@@ -1,10 +1,21 @@
 # Containerization and its methods : 
 
-# What is Containerization ? 
+## What is Containerization?
+Containerization is the process of packaging software code, its required dependencies, configurations, and other detail to be easily deployed in the same or another computing environment.
+containerization is the encapsulation of an application and its required environment.
+To package up apps so they could be run on production systems. To do this we need some kind of virtualization layer that would allow anything to be run. Heroku was one of the first to tackle this and they used a Linux virtualization system called "lxc" - short for Linux Containers.
+A bit later a Heroku competitor named dotCloud was trying to tackle similar problems and went a different route which ultimately led to Docker, a standard way to create and run containers across platforms including Windows, Mac, Linux, Kubernetes.
 
+## Ways to achieve Containerization?
+* Dockerfile
+* Buildpacks
+* JIB
 
-# Why JIB ?
+## Why JIB?
 
+* Simple - As developer need not maintain Dockerfile and all ways to handle it. Dev could focus majorly on the application functionality and the Gradle/Maven Jib plugin will do the rest. Actually, we don't even have to have docker installed to create and publish the docker images ourselves.
+* Fast - As JIB takes advantage of caching image layers. Deploy your changes fast. Jib separates your application into multiple layers, splitting dependencies from classes. Now you don't have to wait for Docker to rebuild your entire Java application - just deploy the layers that changed.
+* Reproducible - Rebuilding your container image with the same contents always generates the same image. Never trigger an unnecessary update again.
 
 ### Native Approach 
 ![alt text](https://storage.googleapis.com/gweb-cloudblog-publish/images/docker_build_flowrc1o.max-600x600.PNG)
