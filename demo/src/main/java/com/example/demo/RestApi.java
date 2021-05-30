@@ -11,7 +11,7 @@ import java.net.UnknownHostException;
 public class RestApi {
 	@RequestMapping("/")
 	public String index() {
-		return "Greetings from Spring Boot and Jib!";
+		return "Welcome to Jib containerization demo!";
 	}
 
 	@RequestMapping(value = "/hostname",method = RequestMethod.GET)
