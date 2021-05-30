@@ -10,6 +10,12 @@ version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
 targetCompatibility = '1.8'
 
+jib {
+	to {
+		image 'ritreshgirdhar/jib-demo:1.0.0'
+	}
+}
+
 configurations {
 	compileOnly {
 		extendsFrom annotationProcessor
